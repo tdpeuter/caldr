@@ -39,7 +39,7 @@ func New(endpoint, username, password string) (*DAV, error) {
 	}
 
 	dav.calendarHomeSet, err =
-		dav.cdClient.FindCalendarHomeSet(fmt.Sprintf("principals/%s", dav.username))
+		dav.cdClient.FindCalendarHomeSet(fmt.Sprintf("principals/users/%s", dav.username))
 	if err != nil {
 		return dav, err
 	}
